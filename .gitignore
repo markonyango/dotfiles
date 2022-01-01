@@ -1,0 +1,15 @@
+/*
+!.gitignore
+
+# Only allow nvim sub-directory to be tracked
+!/.config
+/.config/*
+!/.config/nvim/
+
+!.vimrc
+!.zshrc
+!.zshenv
+!.bashrc
+!.profile
+!.gitconfig
+!.angular-config.json
