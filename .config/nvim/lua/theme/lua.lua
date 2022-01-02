@@ -1,14 +1,14 @@
 
-vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = "day"
 vim.g.tokyonight_day_brightness = 0.4
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
-vim.cmd[[colorscheme tokyonight]]
-
+-- vim.cmd[[colorscheme tokyonight]]
+require('nightfox').load('nordfox')
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'nightfox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},

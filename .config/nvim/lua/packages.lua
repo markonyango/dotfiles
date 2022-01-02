@@ -32,9 +32,11 @@ Plug 'rust-lang/rust.vim'
 -- use { 'vim-utils/vim-man'}
 -- use { 'mbbill/undotree'}
 -- use { 'tpope/vim-dispatch'}
+
 -- Color schemes
 Plug 'rebelot/kanagawa.nvim'
 Plug 'folke/tokyonight.nvim'
+Plug 'EdenEast/nightfox.nvim'
 
 -- use { 'tpope/vim-projectionist'}
 -- use { 'tomlion/vim-solidity'}
@@ -43,3 +45,4 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 call('plug#end')
 
+require('completion')
