@@ -43,6 +43,12 @@ Plug 'EdenEast/nightfox.nvim'
 -- use { 'nvim-treesitter/playground'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+
+-- Markdown
+Plug 'ellisonleao/glow.nvim'
+
+-- Git
+Plug 'kdheepak/lazygit.nvim'
 call('plug#end')
 
 require('completion')
