@@ -1,4 +1,3 @@
-local jest = require'jester'
 vim.g.mapleader = " "
 
 -- TELESCOPE
@@ -10,6 +9,3 @@ vim.api.nvim_set_keymap("n", "<leader>fh",":Telescope help_tags<cr>", { noremap 
 -- LSP BINDINGS
 vim.api.nvim_set_keymap("n", "ff",":lua vim.lsp.buf.formatting()<cr>", { noremap = false, silent = true })
 
--- JEST BINDINGS
-vim.api.nvim_set_keymap("n", "<leader>tr",":lua jest.run()<cr>", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>tf",":lua jest.run_file()<cr>", { noremap = false, silent = true })

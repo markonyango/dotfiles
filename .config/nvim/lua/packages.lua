@@ -47,8 +47,6 @@ Plug 'kdheepak/lazygit.nvim'
 -- Tabs
 Plug 'alvarosevilla95/luatab.nvim'
 
--- Jest
-Plug 'David-Kunz/jester'
 call('plug#end')
 
 require('completion')
