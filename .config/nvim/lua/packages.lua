@@ -7,11 +7,14 @@ local Plug = vim.fn['plug#']
 
 call('plug#begin', '~/.config/nvim/plugged')
 Plug 'sbdchd/neoformat'
+
+-- Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'rmagatti/auto-session'
 
 -- Completion
 Plug 'hrsh7th/nvim-cmp'
@@ -24,25 +27,16 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
-Plug 'rust-lang/rust.vim'
--- use { 'darrikonn/vim-gofmt'}
--- use { 'tpope/vim-fugitive'}
--- use { 'tpope/vim-rhubarb'}
--- use { 'junegunn/gv.vim'}
--- use { 'vim-utils/vim-man'}
--- use { 'mbbill/undotree'}
--- use { 'tpope/vim-dispatch'}
 
 -- Color schemes
 Plug 'rebelot/kanagawa.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'EdenEast/nightfox.nvim'
 
--- use { 'tpope/vim-projectionist'}
--- use { 'tomlion/vim-solidity'}
--- use { 'nvim-treesitter/playground'}
+-- LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'rust-lang/rust.vim'
 
 -- Markdown
 Plug 'ellisonleao/glow.nvim'
@@ -52,6 +46,9 @@ Plug 'kdheepak/lazygit.nvim'
 
 -- Tabs
 Plug 'alvarosevilla95/luatab.nvim'
+
+-- Jest
+Plug 'David-Kunz/jester'
 call('plug#end')
 
 require('completion')
