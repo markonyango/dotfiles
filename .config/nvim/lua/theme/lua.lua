@@ -1,5 +1,5 @@
 
-vim.g.tokyonight_style = "day"
+vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_day_brightness = 0.4
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 

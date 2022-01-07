@@ -49,6 +49,10 @@ Plug 'ellisonleao/glow.nvim'
 
 -- Git
 Plug 'kdheepak/lazygit.nvim'
+
+-- Tabs
+Plug 'alvarosevilla95/luatab.nvim'
 call('plug#end')
 
 require('completion')
+require('luatab').setup{}
