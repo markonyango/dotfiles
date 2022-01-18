@@ -47,7 +47,10 @@ Plug 'kdheepak/lazygit.nvim'
 -- Tabs
 Plug 'alvarosevilla95/luatab.nvim'
 
+-- Filetree
+Plug 'kyazdani42/nvim-tree.lua'
 call('plug#end')
 
 require('completion')
 require('luatab').setup{}
+require('filetree')
