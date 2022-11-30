@@ -9,7 +9,7 @@ vim.api.nvim_set_keymap("n", "<leader>fb",":Telescope buffers<cr>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh",":Telescope help_tags<cr>", opts)
 
 -- LSP BINDINGS
-vim.api.nvim_set_keymap("n", "ff",":lua vim.lsp.buf.formatting()<cr>", opts)
+vim.api.nvim_set_keymap("n", "ff",":lua vim.lsp.buf.format()<cr>", opts)
 
 vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
