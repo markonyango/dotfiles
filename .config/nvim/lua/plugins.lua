@@ -49,6 +49,7 @@ return packer.startup(function(use)
   -- LSP
   use 'simrat39/rust-tools.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- Cmp 
   use "hrsh7th/cmp-nvim-lsp"
@@ -63,7 +64,8 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires= { { "nvim-lua/plenary.nvim" } } }
 
   -- Colorschemes
-  use { "folke/tokyonight.nvim" }
+  -- use "folke/tokyonight.nvim"
+  use "rebelot/kanagawa.nvim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

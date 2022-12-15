@@ -6,6 +6,7 @@ require('telescope')
 require('lsp_config')
 require('cmp_config')
 require('lualine_config')
+require('treesitter_config')
 
 require('mason').setup({
   PATH = "prepend",
