@@ -1,17 +1,22 @@
-local opt = vim.opt
+local options = { 
+	syntax = "on", 
+	wrap = false, 
+	expandtab = true,
+	hidden = true, 
+	ignorecase = true, 
+	list = true, 
+	number = true, 
+	relativenumber = true, 
+	nu = true, 
+	scrolloff = 4, 
+	shiftwidth = 2, 
+	tabstop = 2, 
+	termguicolors = true, 
+	smartindent = true, 
+	cursorline = true, 
+	hlsearch = true
+}
 
-opt.syntax = 'on'
-opt.wrap = false
-opt.expandtab = true
-opt.hidden = true
-opt.ignorecase = true
-opt.list = true
-opt.number = true
-opt.relativenumber = true
-opt.nu = true
-opt.scrolloff = 4
-opt.shiftwidth = 2
-opt.tabstop = 2
-opt.termguicolors = true
-opt.smartindent = true
-
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
