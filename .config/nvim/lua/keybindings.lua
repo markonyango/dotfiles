@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local termopts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -26,4 +26,11 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Open Explorer view
-vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
+keymap("n", "<leader>pv", ":Ex<CR>")
+
+-- Navigation bindings --
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "J", "mzJ`z")
+
+keymap("n", "<leader>f", vim.lsp.buf.format)
