@@ -25,12 +25,5 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
--- TELESCOPE
-keymap("n", "<leader>ff",":Telescope find_files<cr>", opts)
-keymap("n", "<leader>fg",":Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fb",":Telescope buffers<cr>", opts)
-keymap("n", "<leader>fh",":Telescope help_tags<cr>", opts)
+-- Open Explorer view
+vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
