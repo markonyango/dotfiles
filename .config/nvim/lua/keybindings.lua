@@ -28,6 +28,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Open Explorer view
 keymap("n", "<leader>pv", ":Ex<CR>")
 
+-- Open Filetree
+keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
+
 -- Navigation bindings --
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
