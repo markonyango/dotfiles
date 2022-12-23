@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local termopts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.keymap.set
 
@@ -37,3 +35,4 @@ keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "J", "mzJ`z")
 
 keymap("n", "<leader>f", vim.lsp.buf.format)
+

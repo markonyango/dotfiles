@@ -3,6 +3,7 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
+  'angularls',
   'tsserver',
   'eslint',
   'sumneko_lua',
@@ -58,14 +59,15 @@ lsp.on_attach(function(client, bufnr)
   --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   keymap('n', 'gD', vim.lsp.buf.declaration, bufopts)
   keymap('n', 'gd', vim.lsp.buf.definition, bufopts)
+  keymap('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
   keymap('n', 'K', vim.lsp.buf.hover, bufopts)
   keymap('n', 'gi', vim.lsp.buf.implementation, bufopts)
   keymap('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
   keymap('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   keymap('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   keymap('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-  keymap('n', 'gr', vim.lsp.buf.references, bufopts)
   keymap('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  keymap('n', '<space>ne', function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end, bufopts)
 
 end)
 
