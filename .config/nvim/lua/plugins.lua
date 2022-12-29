@@ -72,13 +72,7 @@ return packer.startup(function(use)
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
+    config = function() require("trouble").setup() end
   }
 
   -- Filetree
@@ -86,6 +80,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { "nvim-lua/plenary.nvim" } } }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Colorschemes
   use "rebelot/kanagawa.nvim"

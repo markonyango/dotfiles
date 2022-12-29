@@ -5,10 +5,12 @@ require('telescope').setup {
 
      prompt_prefix = " ",
      selection_caret = " ",
-     path_display = { "smart" },
-     file_ignore_patterns = { ".git/", "node_modules" },
+     path_display = { "truncate" },
+     file_ignore_patterns = { ".git/", "node_modules", ".angular" },
    }
 }
+
+require('telescope').load_extension('fzf')
 
 -- TELESCOPE
 vim.keymap.set("n", "<leader>ff",":Telescope find_files<cr>", opts)

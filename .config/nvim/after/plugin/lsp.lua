@@ -56,8 +56,7 @@ local keymap = vim.keymap.set
 lsp.on_attach(function(client, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   -- Enable completion triggered by <c-x><c-o>
-  --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  keymap('n', 'gD', vim.lsp.buf.declaration, bufopts)
+  keymap('n', 'gD', "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", bufopts)
   keymap('n', 'gd', vim.lsp.buf.definition, bufopts)
   keymap('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
   keymap('n', 'K', vim.lsp.buf.hover, bufopts)
