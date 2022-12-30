@@ -68,6 +68,7 @@ return packer.startup(function(use)
     }
   }
 
+  use 'mattkubej/jest.nvim'
   use "kyazdani42/nvim-web-devicons"
   use {
     "folke/trouble.nvim",
