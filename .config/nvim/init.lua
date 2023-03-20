@@ -94,6 +94,8 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
+-- Set relative line numbering
+vim.o.relativenumber = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
