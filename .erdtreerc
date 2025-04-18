@@ -1,0 +1,6 @@
+--prefix si
+--dirs-first
+--level 2
+--icons
+--ignore-git
+--glob !node_modules
