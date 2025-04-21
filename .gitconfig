@@ -2,3 +2,8 @@
 	helper = store
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
+[user]
+	name = Mark Onyango
+	email = mark.onyango@gmail.com
