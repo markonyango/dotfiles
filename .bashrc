@@ -126,3 +126,10 @@ export NVM_DIR="$HOME/.nvm"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# fnm
+FNM_PATH="/home/mark/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
