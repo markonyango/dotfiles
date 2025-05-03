@@ -133,3 +133,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# Install Java Temurin 17 JDK
+export PATH=$PWD/jdk-17.0.15+6/bin:$PATH
