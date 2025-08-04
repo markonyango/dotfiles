@@ -41,7 +41,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", opt = true } },
 
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -111,52 +110,6 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"folke/snacks.nvim",
-		opts = {
-			terminal = {
-				keys = "close",
-			},
-		},
-		keys = {
-			{
-				"<leader>cr",
-				function()
-					Snacks.terminal.open("cargo run")
-				end,
-				desc = "Cargo run",
-			},
-			{
-				"<leader>lg",
-				function()
-					Snacks.lazygit.open()
-				end,
-				desc = "Cargo run",
-			},
-			{
-				"<leader>ex",
-				function()
-					Snacks.explorer.open()
-				end,
-				desc = "Cargo run",
-			},
-			{
-				"<c-/>",
-				function()
-					Snacks.terminal()
-				end,
-				desc = "Toggle Terminal",
-			},
-			{
-				"<c-_>",
-				function()
-					Snacks.terminal()
-				end,
-				desc = "which_key_ignore",
-			},
-		},
-	},
-
 	-- LSP Plugins
 	{
 		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -171,8 +124,6 @@ require("lazy").setup({
 		},
 	},
 
-	{ "Bilal2453/luvit-meta", lazy = true },
-
 	require("plugins.lsp-config"),
 
 	require("plugins.conform"),
@@ -184,21 +135,6 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 		opts = {},
 	},
-
-	-- {
-	--   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-	--   'folke/tokyonight.nvim',
-	--   priority = 1000, -- Make sure to load this before all the other start plugins.
-	--   init = function()
-	--     -- Load the colorscheme here.
-	--     -- Like many other themes, this one has different styles, and you could load
-	--     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-	--     vim.cmd.colorscheme 'tokyonight-night'
-	--
-	--     -- You can configure highlights by doing something like:
-	--     vim.cmd.hi 'Comment gui=none'
-	--   end,
-	-- },
 
 	-- Highlight todo, notes, etc in comments
 	{
