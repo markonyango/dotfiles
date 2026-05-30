@@ -127,6 +127,10 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # fnm
 FNM_PATH="/home/mark/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -135,4 +139,45 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # Install Java Temurin 17 JDK
-export PATH=$PWD/jdk-17.0.15+6/bin:$PATH
+export PATH=$HOME/jdk-17.0.15+6/bin:$PATH
+
+# Install Starship Terminal
+eval "$(starship init bash)"
+
+# fnm
+FNM_PATH="/home/mark/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# Install Lua language server
+export PATH=$HOME/bin/luals/bin:$PATH
+
+export VISUAL="/home/mark/bin/nvim"
+export EDITOR="$VISUAL"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/mark/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# opencode
+export PATH=/home/mark/.opencode/bin:$PATH
+
+# Android SDK
+export ANDROID_HOME=/sandbox/sdk/Android
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Flutter
+export PATH="$PATH:/sandbox/sdk/flutter/bin"
+
+# OLLAMA
+export OLLAMA_MODELS=/sandbox/ollama
+export PATH=$PATH:$HOME/ollama/bin
+
+# LLAMA.cpp
+export PATH=$PATH:$HOME/bin/llama
